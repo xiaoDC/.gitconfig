@@ -1,0 +1,21 @@
+[alias]
+  co = checkout
+  ci = commit
+  cim = commit -m
+  st = status
+  br = branch
+  rb = rebase
+  rbi = rebase -i
+  cp = cherry-pick
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  graph = log --graph --abbrev-commit --decorate --date=relative --all
+  type = cat-file -t
+  dump = cat-file -p
+[core]
+  excludesfile = /Users/chenglong/.gitignore_global
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
